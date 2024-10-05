@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Remover",
+  "version": "1.0.0",
+  "icons": {
+    "16": "/16.png",
+    "48": "/48.png",
+    "128": "/128.png"
+  },
+  "description": "Removes ads from YouTube videos",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ]
+}
